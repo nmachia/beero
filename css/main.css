@@ -3,5 +3,145 @@ body, html{
 }
 
 body{
-    background:#c33;
+    background:url('dots.png') top left repeat #fff;
+    font-family: 'Alfa Slab One', cursive;
 }
+h1{
+    margin:0.2em 0;
+    font-size:1.6em;
+}
+
+#askBox{
+    display:block;
+    text-align:center;
+    color:rgba(0,0,0,0.6);
+     text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+     text-transform: uppercase;
+     margin-bottom:30px;
+
+}
+
+#topBar{
+    display:block;
+    padding:0px 20px;
+    background:#fff;
+    border-bottom:solid 1px #ddd;
+    height:40px;
+}
+#scoreBox{
+    display: inline-block;
+    float:right;
+    height:40px;
+    line-height: 40px;
+}
+
+#isBox{
+    text-align: center;
+     color:rgba(0,0,0,0.6);
+     text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+     text-transform: uppercase;
+}
+#questionBox{
+    display: block;
+    text-align: center;
+    height:60px;
+    line-height: 60px;
+    color:#ceca52;
+    font-size:50px;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+}
+    #questionBox span{
+        color:rgba(0,0,0,0.6);
+        text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+    }
+
+#guessBox{
+    display: block;
+    position: relative;
+    max-width:960px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+}
+    #guessBox a{
+        display:inline-block;
+        position:relative;
+        width:40%;
+        max-width:300px;
+        margin:0% 25px;
+        background:#fff;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        border:solid 4px #ceca52;
+    }
+
+    #guessBox a:after {
+          content: '';
+          position: absolute;
+          top: -15px;
+          left: -15px;
+          right: -15px;
+          bottom: -15px;
+          background: white;
+          z-index: -1;
+           -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+        }
+    #guessBox img{
+        max-width:100%;
+    }
+
+#resultWrapper{
+   display: none;
+    position: relative;
+    max-width:960px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    font-family: Helvetica, Arial;
+    color:#222;
+    background:#fff;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        border:solid 4px #ceca52;
+        min-height:40px;
+        padding:30px;
+}
+ #resultWrapper:after {
+          content: '';
+          position: absolute;
+          top: -15px;
+          left: -15px;
+          right: -15px;
+          bottom: -15px;
+          background: white;
+          z-index: -1;
+           -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+#nextBox{
+    text-align: center;
+    padding-top:40px;
+}
+    #nextBox a{
+        color:#fff;
+        background:#ceca52;
+        padding:10px 20px;
+        text-decoration: none;
+        font-size:30px;
+        transition: background-color 0.2s ease;
+    }
+    #nextBox a:hover{
+        background:#bab64c;
+    }
