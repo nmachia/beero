@@ -1,1 +1,37 @@
-<?php echo 'hello world'; ?>
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+   
+   		<div id="scoreBox"></div>
+   		<div id="questionBox"></div>
+        <div id="askBox"><h1>Is it a beer or a superhero?</h1></div>
+        <div id="resultBox"></div>
+        <div id="guessBox">
+        <a href="#" id="beer" class="guess">BEER</a>
+        <a href="#" id="hero" class="guess">SUPERHERO</a>
+    	</div>
+    	<div id="nextBox"><a href="#">NEXT</a></div>
+    	<div id="finalScore"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/main.js"></script>
+         <script type="text/javascript">
+        	$( document ).ready(function() {
+        		playGame();
+        	});
+        </script>
+    </body>
+</html>
