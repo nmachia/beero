@@ -112,23 +112,11 @@ h1{
         border:solid 4px #ceca52;
         min-height:40px;
         padding:30px;
-}
- #resultWrapper:after {
-          content: '';
-          position: absolute;
-          top: -15px;
-          left: -15px;
-          right: -15px;
-          bottom: -15px;
-          background: white;
-          z-index: -1;
-           -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+         -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
         -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
         box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
             -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            border-radius: 10px;
-        }
+}
 
 #nextBox{
     text-align: center;
