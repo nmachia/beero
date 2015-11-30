@@ -16,7 +16,7 @@
     </head>
     <body>
    
-   		<div id="topBar"><div id="scoreBox"></div></div>
+   		<div id="topBar"><img src="images/logo.jpg"/><div id="scoreBox"></div></div>
  
    		<div id="questionBox"></div>
         <div id="askBox"><h1>a beer or a superhero?</h1></div>
@@ -28,17 +28,24 @@
 </a></div>
             <div class="clearfix"></div>
     	</div>
-        <div id="finalResult"><h2>Your Score:</h2><div id="finalScore"></div> <div id="playAgain"><a href="#">PLAY AGAIN <i class="fa fa-refresh"></i>
+        <div id="finalResult"><h2>Your Score:</h2><div id="finalScore"></div> 
+        <div id="finalDescription"></div>
+        <div id="playAgain"><a href="#">PLAY AGAIN <i class="fa fa-refresh"></i>
 </a></div></div>
         <div id="guessBox">
         <a href="#" id="beer" class="guess"><img src="images/beer.png" alt="beer"/></a>
         <a href="#" id="hero" class="guess"><img src="images/hero.png" alt="hero"/></a>
     	</div>
+
+         <div class="share42init"></div>
+
+        <div id="creditBox">(<a href="http://www.ikeaordeath.com" target="_blank">Ikea or Death</a> did it first.)</div>
     	
     	
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script type="text/javascript" src="./js/share42.js"></script> 
         <script src="js/main.js"></script>
          <script type="text/javascript">
         	$( document ).ready(function() {

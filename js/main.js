@@ -5,6 +5,11 @@ function beeroItem(title, description, type, thumb){
 	this.type = type;
 	this.thumb = thumb;
 }
+function outcome(title, description, rank){
+	this.title = title;
+	this.description = description;
+	this.rank = rank;
+}
 
 //randomize the question order
 function shuffle(array) {
@@ -36,8 +41,6 @@ questions.push(new beeroItem('EMMA FROST','The former White Queen of the Hellfir
 questions.push(new beeroItem('MADROX','Jamie Madrox, also known as Multiple Man, is a mutant with the ability to create duplicates of himself through physical contact. These "dupes" can later be reabsorbed, along with all of their memories and experiences. Madrox runs X-Factor Investigations, a mutant detective agency.','hero','madrox'));
 
 
-
-
 //load the next question or show final
 function showQuestion(question, tempscore){
 	if(question < questions.length){
@@ -46,13 +49,15 @@ function showQuestion(question, tempscore){
 		//modifier to show correct question number instead of array number
 		var questionNum = question +1;
 
-		$("#scoreBox").html("question " + questionNum + " of " + questions.length);
+		$("#scoreBox").html("<span>Question </span>" + questionNum + " of " + questions.length);
 		$("#questionBox").html("<span>IS</span> " + questions[question].title);
 		$('#guessBox').fadeIn();
 	}else{
 		//showFinal(score);
+		$("#scoreBox").hide();
 		$("#questionBox").hide();
 		$("#askBox").hide();
+		evaluateScore(tempscore);
 		$("#finalScore").html(tempscore + " out of " + questions.length);
 		$('#finalResult').fadeIn();
 	}
@@ -63,7 +68,7 @@ function showQuestion(question, tempscore){
 function evaluateQuestion(question,guess){
 	if(guess == questions[question].type){
 		console.log('right!');
-		$("#resultBox").html("<h2>right answer!</h2>");
+		$("#resultBox").html("<h2>Right Answer!</h2>");
 		score++;
 		$("#resultImage").html("<img src=\"./images/"+questions[question].thumb+".jpg\" />");
 		$("#resultDescription").html(questions[question].description);
@@ -72,7 +77,7 @@ function evaluateQuestion(question,guess){
 		$('#nextBox').fadeIn();
 		$('#resultWrapper').fadeIn();
 	}else{
-		$("#resultBox").html("<h2>wrong answer!</h2>");
+		$("#resultBox").html("<h2>Wrong Answer!</h2>");
 		$("#resultImage").html("<img src=\"./images/"+questions[question].thumb+".jpg\" />");
 		$("#resultDescription").html(questions[question].description);
 		//$('#resultBox').fadeIn();
@@ -83,6 +88,29 @@ function evaluateQuestion(question,guess){
 	//raise count
 	qCount++;
 	
+}
+
+function evaluateScore(fullScore){
+	var rawScore = fullScore / questions.length;
+
+	if(rawScore < 0.25){
+		$("#finalDescription").html("Ouch! Crack a book or a bottle - either way you need some help!");
+		return false;
+	}else if (rawScore < 0.5){
+		$("#finalDescription").html("You've got potential but you better go back to the drawing board... or the bar.");
+		return false;
+	}else if (rawScore < 0.75){
+		$("#finalDescription").html("Like a pumpkin beer in July or a sidekick origin story - you're good, but not great.");
+		return false;
+	}else if (rawScore < 0.9999999999){
+		$("#finalDescription").html("Watch out super villans, beware macrobrewers - you've met your match!");
+		return false;
+	}else{
+		$("#finalDescription").html("You are the King of Comics, the Sultan of Suds, the... person who got all the questions right.  Nice work, Super Beero! ");
+		return false;
+	}
+
+
 }
 
 
