@@ -38,8 +38,10 @@ questions.push(new beeroItem('DEAD GUY','In the style of a German Maibock, brewe
 questions.push(new beeroItem('WAILING WENCH','Dark and robust brewed in the style of a American Strong Ale, full bodied and screaming with hops. This beer was awarded a gold medal in the 2012 World Beer Championship, with a rating of exceptional.','beer','wench'));
 questions.push(new beeroItem('ARISIA','Arisia is the Green Lantern of Space Sector 2815. Her family has a long and proud history serving in the Green Lantern Corps.','hero','arisia'));
 questions.push(new beeroItem('EMMA FROST','The former White Queen of the Hellfire Club, Emma Frost is a powerful mutant telepath who can transform herself into organic diamond. She has become an eminent member among the X-Men.','hero','emma'));
+questions.push(new beeroItem('HEADY TOPPER','Heady Topper is a double India Pale Ale brewed by The Alchemist in Waterbury, VT. It is unfiltered and contains 8% ABV, with hints of citrus flavors. Unpasteurized, it is kept refrigerated by authorized retailers until point of sale and has been described as "a complex web of genius."','beer','heady'));
 questions.push(new beeroItem('MADROX','Jamie Madrox, also known as Multiple Man, is a mutant with the ability to create duplicates of himself through physical contact. These "dupes" can later be reabsorbed, along with all of their memories and experiences. Madrox runs X-Factor Investigations, a mutant detective agency.','hero','madrox'));
-
+questions.push(new beeroItem('BOOSTER GOLD','Booster Gold is a time-traveling super-hero from the 25th Century who uses high-tech equipment to fight crime. Not taken very seriously by his peers because of a careless and somewhat egotistical attitude, he is frequently under-estimated.','hero','booster'));
+questions.push(new beeroItem('RED TORNADO','Red Tornado is an android created by Professor T.O. Morrow. He is a highly intelligent android possessing superior strength and durability, and capable of creating bursts of cyclone-force winds that enable flight, enhanced speed and the creation of storms.','hero','tornado'));
 
 //load the next question or show final
 function showQuestion(question, tempscore){
@@ -103,10 +105,10 @@ function evaluateScore(fullScore){
 		$("#finalDescription").html("Like a pumpkin beer in July or a sidekick origin story - you're good, but not great.");
 		return false;
 	}else if (rawScore < 0.9999999999){
-		$("#finalDescription").html("Watch out super villans, beware macrobrewers - you've met your match!");
+		$("#finalDescription").html("Watch out super villans, beware macrobrewers ... there is a Super Beero in our midst!");
 		return false;
 	}else{
-		$("#finalDescription").html("You are the King of Comics, the Sultan of Suds, the... person who got all the questions right.  Nice work, Super Beero! ");
+		$("#finalDescription").html("You are the king of comics, the sultan of suds, the ultimate connoisseur!  Nice work, Super Beero! ");
 		return false;
 	}
 
