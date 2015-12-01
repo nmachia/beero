@@ -84,16 +84,16 @@
         <script src="js/main.js"></script>
          <script type="text/javascript">
         	$( document ).ready(function() {
-                    //if (document.cookie.indexOf('visited=yes') == -1) {
-                        //var fifteenDays = 1000*60*60*24*7; //actually seven days
-                        //var expires = new Date((new Date()).valueOf() + fifteenDays);
-                        //document.cookie = "visited=yes;expires=" + expires.toUTCString();
+                    if (document.cookie.indexOf('visited=yes') == -1) {
+                        var fifteenDays = 1000*60*60*24*7; //actually seven days
+                        var expires = new Date((new Date()).valueOf() + fifteenDays);
+                        document.cookie = "visited=yes;expires=" + expires.toUTCString();
                         if($( window ).width() > 620){
                             $.colorbox({maxWidth:"50%", inline:true, opacity:0.9, href:"#instructions"});
                         }else{
                             $.colorbox({maxWidth:"90%", inline:true, opacity:0.9, href:"#instructions"});
                         }
-                    //}
+                    }
                     playGame();
         	});
         </script>
