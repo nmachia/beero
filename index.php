@@ -29,6 +29,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link href='https://fonts.googleapis.com/css?family=Alfa+Slab+One' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/colorbox.css" />
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <meta property="og:url"     content="http://www.nickmachia.com/superbeero" />
@@ -78,11 +79,22 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script type="text/javascript" src="./js/share42.js"></script> 
+        <script type="text/javascript" src="./js/share42.js"></script>
+        <script type="text/javascript" src="./js/jquery.colorbox-min.js"></script>
         <script src="js/main.js"></script>
          <script type="text/javascript">
         	$( document ).ready(function() {
-        		playGame();
+                    //if (document.cookie.indexOf('visited=yes') == -1) {
+                        //var fifteenDays = 1000*60*60*24*7; //actually seven days
+                        //var expires = new Date((new Date()).valueOf() + fifteenDays);
+                        //document.cookie = "visited=yes;expires=" + expires.toUTCString();
+                        if($( window ).width() > 620){
+                            $.colorbox({maxWidth:"50%", inline:true, opacity:0.9, href:"#instructions"});
+                        }else{
+                            $.colorbox({maxWidth:"90%", inline:true, opacity:0.9, href:"#instructions"});
+                        }
+                    //}
+                    playGame();
         	});
         </script>
 
@@ -98,5 +110,13 @@
     <img src="images/tornado.jpg" width="1" height="1" />
     <img src="images/wench.jpg" width="1" height="1" />
 </div>
+        <div style='display:none'>
+            <div id='instructions' style='padding:10px; background:#fff;'>
+                <p><img src="./images/or.jpg"/></p>
+                <h4>Comic books and craft beer have a lot in common.</h4>
+                <p>Devoted fans, strong opinions, and some weird names.  Turns out, that last one is a lot more common than you might think.  Test your knowledge by guessing if each name belongs to a beer or a superhero!</p>
+                <p id="gotIt"><a href='#' onclick='parent.$.colorbox.close(); return false;'>Got it! <i class="fa fa-check-square-o"></i></a></p>
+            </div>
+        </div>
     </body>
 </html>

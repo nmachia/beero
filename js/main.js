@@ -142,7 +142,6 @@ function evaluateScore(fullScore){
 
 
 
-
 //initialize game
 function playGame(){
 	$('#nextBox').hide();
