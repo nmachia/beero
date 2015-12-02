@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
@@ -89,11 +89,17 @@
                         var expires = new Date((new Date()).valueOf() + fifteenDays);
                         document.cookie = "visited=yes;expires=" + expires.toUTCString();
                         if($( window ).width() > 620){
-                            $.colorbox({maxWidth:"50%", inline:true, opacity:0.9, href:"#instructions"});
+                            $.colorbox({width:"488px",  height:"450px", inline:true, opacity:0.9, href:"#instructions", onComplete : function() { 
+      
+  }    });
+
                         }else{
-                            $.colorbox({maxWidth:"90%", inline:true, opacity:0.9, href:"#instructions"});
+                            $.colorbox({width:"300px",  height:"440px", inline:true, opacity:0.9, href:"#instructions", onComplete : function() { 
+      
+  }    });
+
                         }
-                    }
+                   }
                     playGame();
         	});
         </script>
@@ -102,7 +108,7 @@
     <img src="images/arisia.jpg" width="1" height="1" />
     <img src="images/booster.jpg" width="1" height="1" />
     <img src="images/cherrybusey.jpg" width="1" height="1" />
-    <img src="images/deadyguy.jpg" width="1" height="1" />
+    <img src="images/deadguy.jpg" width="1" height="1" />
     <img src="images/emma.jpg" width="1" height="1" />
     <img src="images/heady.jpg" width="1" height="1" />
     <img src="images/madrox.jpg" width="1" height="1" />
